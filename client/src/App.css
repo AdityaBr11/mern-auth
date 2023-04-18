@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+.nav{
+  width: 98% !important;
+  border-radius: 28px;
+  margin-left: 1% !important;
+  background: rgba(158, 153, 153, 0.662) ;
+  /* background-color: gray; */
+  margin-top: 15px;
+  backdrop-filter: blur(10px);
+  color: black !important;
+  font-family: 'Roboto';
+  padding: 0px 10px;
+  height: 64px;
+  position: fixed !important;
+}

@@ -1,13 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
+import AllRoutes from './routes/AllRoutes'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadUser } from './Redux/user/action'
 
 function App() {
+  const { user,isAuthenticated }=useSelector((store)=>store.user)
+  const dispatch=useDispatch();
+
+  useEffect(()=>{
+    dispatch(loadUser())
+  },[dispatch])
+
   return (
-    <div>
-      <h1 className='text-2xl flex justify-center h-screen items-center'>Hello</h1>
-    </div>
+    <>
+      <AllRoutes/>
+    </>
   )
 }
 
